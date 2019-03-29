@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: cloud-errands-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/cloud-errends/cloud-errands-cloud-config
+          search-paths: respo
+          username: iamchriswu
+          password: 1172477133wq
+  zipkin:
+    base-url: http://152.136.77.190:9411
+  boot:
+    admin:
+      client:
+        url: http://152.136.77.190:8084
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://152.136.77.190:8761/eureka/
